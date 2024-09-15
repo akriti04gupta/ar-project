@@ -136,6 +136,7 @@ body {
 .cta-button:hover {
     background: #cc4528;
     transform: scale(1.05);
+    cursor: pointer;
 }
 
 section {

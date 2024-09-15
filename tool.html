@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Surgery Assistant - Analysis Platform</title>
+    <link rel="stylesheet" href="tool.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">AR Surgery Assistant</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" class="active">Analysis Platform</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <h1>Welcome to the AR Analysis Platform</h1>
+            <p>Enhance your surgical precision with our cutting-edge AR tools.</p>
+        </section>
+
+        <section class="analysis-workflow">
+            <div class="step" id="uploadStep">
+                <i class="fas fa-upload"></i>
+                <h2>Upload Scan</h2>
+                <input type="text" placeholder="Enter Scan ID" id="scanId">
+                <button onclick="redirectToUpload()">Upload Scan</button>
+            </div>
+            <div class="step" id="analyzeStep">
+                <i class="fas fa-microscope"></i>
+                <h2>Analyze Scan</h2>
+                <button onclick="analyzeScan()">Start Analysis</button>
+            </div>
+            <div class="step" id="viewStep">
+                <i class="fas fa-cube"></i>
+                <h2>3D Visualization</h2>
+                <button onclick="view3D()">View in 3D</button>
+            </div>
+            <div class="step" id="abnormalitiesStep">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h2>Abnormalities</h2>
+                <button onclick="viewAbnormalities()">View Abnormalities</button>
+            </div>
+            <div class="step" id="infoStep">
+                <i class="fas fa-info-circle"></i>
+                <h2>Detailed Info</h2>
+                <button onclick="getDetailedInfo()">Get Details</button>
+            </div>
+        </section>
+
+        <section class="visualization">
+            <div id="visualizationArea">
+                <!-- 3D model or scan results will be displayed here -->
+                <p>Visualization area for 3D models and scan results</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 AR Surgery Assistant. All rights reserved.</p>
+    </footer>
+
+    <script src="ar-analysis-script.js"></script>
+</body>
+</html>
