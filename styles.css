@@ -151,7 +151,7 @@ section {
     color: #fff;
     text-align: center;
     padding: 10px 10px;
-    position: fixed;
+    position:relative;
     bottom: 0;
     width: 100%;
     animation: fadeInFooter 2s ease-in-out; 
