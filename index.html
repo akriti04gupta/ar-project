@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AR Surgery Assistant</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
     <header class="header">
         <nav class="navbar">
-            <a href="#" class="logo">AR Surgery Assistant</a>
+            <a href = "index.html" class="logo">AR Surgery Assistant</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#features">Features</a></li>
                 <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
         <div class="hero">
@@ -41,7 +42,7 @@
         </div>
     </section>
 
-    <section id="contact" class="contact">
+    <!-- <section id="contact" class="contact">
         <h2>Contact Us</h2>
         <form>
             <input type="text" name="name" placeholder="Your Name" required>
@@ -49,7 +50,35 @@
             <textarea name="message" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
-    </section>
+    </section> -->
+    <section id="contact"></section>
+        <div class="contact-box">
+          <div class="contact-links">
+            <h2 class="h">CONTACT</h2>
+            
+          </div>
+          <div class="contact-form-wrapper">
+            <form id="contactForm" onclick="return validateForm(event)">
+              <div class="form-item">
+                <label for="sender"></label>
+                <input type="text" name="sender" id="from_name" placeholder="Enter your name" autocomplete="name" required>
+                <!-- <input type="text" name="sender" id="sender" autocomplete="name" required> -->
+              </div>
+              <div class="form-item">
+                <label for="email"></label>
+                <!-- <input type="email" name="email" id="email" autocomplete="email" required> -->
+                <input type="email" name="email" id="from_email" placeholder="Enter your email" autocomplete="email" required>
+              </div>
+              <div class="form-item">
+                <label for="message"></label>
+                <!-- <textarea name="message" id="message" autocomplete="on" required></textarea> -->
+                <textarea name="message" placeholder="Type your message" id="message" autocomplete="on" required></textarea>
+              </div>
+              <button type="submit" class="submit-btn" >Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
 
     <footer class="footer">
         <p>&copy; 2024 AR Surgery Assistant. All rights reserved.</p>
