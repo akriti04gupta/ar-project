@@ -12,11 +12,35 @@ body {
 }
 
 .header {
-    background: #0077cc;
+    position: relative;
+    background: rgba(0, 119, 204, 0.21);    
     color: #fff;
     padding: 20px;
     text-align: center;
-    animation: slideDown 1s ease-out; 
+    animation: slideDown 1s ease-out;
+    overflow: hidden; /* Ensures content doesn't flow outside the header */
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Restrict the video to the height of the header */
+    z-index: -1; /* Ensure video is behind the header content */
+    overflow: hidden;
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Make sure video covers the header area */
+    opacity: 0.5; /* Adjust opacity for better readability */
+}
+
+.hero, .navbar {
+    position: relative;
+    z-index: 1; /* Ensure content appears above the video */
 }
 
 @keyframes slideDown {
