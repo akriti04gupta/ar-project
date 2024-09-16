@@ -15,7 +15,7 @@ body {
     position: relative;
     background: rgba(0, 119, 204, 0.21);    
     color: black;
-    padding: 20px;
+    
     text-align: center;
     animation: slideDown 1s ease-out;
     overflow: hidden; /* Ensures content doesn't flow outside the header */
@@ -38,7 +38,7 @@ body {
     opacity: 0.5; /* Adjust opacity for better readability */
 }
 
-.hero, .navbar {
+.hero{
     position: relative;
     z-index: 1; /* Ensure content appears above the video */
 }
@@ -54,14 +54,21 @@ body {
     }
 }
 
-.navbar {
+/* .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10x 20px;
 }
 
 .nav-links {
     list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-links li a{
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .nav-links li {
@@ -111,6 +118,13 @@ body {
 .nav-links a:hover::after {
     transform: scaleX(1); 
 }
+.logo img {
+    position: absolute;
+    top: 10px; 
+    left: 10px; 
+    height: 50px; 
+    height: 50px;
+} */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -122,7 +136,7 @@ body {
     }
 }
 .cta-button {
-    background: #ff5733;
+    background: #032b60;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
@@ -134,7 +148,7 @@ body {
 }
 
 .cta-button:hover {
-    background: #cc4528;
+    background: #032b60;
     transform: scale(1.05);
     cursor: pointer;
 }
@@ -202,14 +216,9 @@ section {
     justify-content: center; 
 }
 h2{
-    color:  #ff5733;
+    color:  #032b60;
 }
-.logo img {
-    position: absolute;
-    top: 10px; 
-    left: 10px; 
-    height: 50px; 
-}
+
 
 
 .features {
@@ -237,9 +246,11 @@ h2{
     font-size: 1em;
 }
 .f{
-    color: #ff5733; 
+    color: #032b60; 
     animation: fadeInUp 1.5s ease-out, slideDown 1s ease-out, fadeInSection 1.5s ease-out forwards; 
-    padding: 10px 0px 10px 550px;
+    padding: 10px 0px 10px 550;
+    display: flex;
+    justify-content: center;
     font-size: 1.7rem;
 }
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -56,7 +56,7 @@
 
         <section class="visualization">
             <div id="visualizationArea">
-                <!-- 3D model or scan results will be displayed here -->
+                
                 <p>Visualization area for 3D models and scan results</p>
             </div>
         </section>
@@ -67,5 +67,67 @@
     </footer>
 
     <script src="ar-analysis-script.js"></script>
+
+
+    <script src="script.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Surgery Assistant - Upload and Analysis</title>
+    <link rel="stylesheet" href="tool.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">AR Surgery Assistant</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" class="active">Analysis Platform</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="upload-section" id="uploadSection">
+            <div class="upload-card">
+                <h2>Upload Scan</h2>
+                <input type="text" placeholder="Enter Scan ID" id="scanId">
+                <button onclick="uploadScan()">Upload Scan</button>
+            </div>
+            <div class="loading-spinner" id="loadingSpinner"></div>
+        </section>
+
+        <section class="analysis-tools" id="toolsSection" style="display: none;">
+            <div class="tool">
+                <i class="fas fa-microscope"></i>
+                <h2>Analyze Scan</h2>
+                <button onclick="analyzeScan()">Start Analysis</button>
+            </div>
+            <div class="tool">
+                <i class="fas fa-cube"></i>
+                <h2>3D Visualization</h2>
+                <button onclick="view3D()">View in 3D</button>
+            </div>
+            <div class="tool">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h2>Abnormalities</h2>
+                <button onclick="viewAbnormalities()">View Abnormalities</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 AR Surgery Assistant. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
