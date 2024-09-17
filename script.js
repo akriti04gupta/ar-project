@@ -39,7 +39,7 @@ function validateUpload() {
 
         // Show the analysis tools with tabs
         toolsSection.style.display = 'block';
-    }, 2000); // Simulate 2 seconds delay
+    }, 1000); // Simulate 2 seconds delay
 }
 
 // Tab functionality

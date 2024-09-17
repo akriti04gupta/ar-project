@@ -295,3 +295,10 @@ h2{
     display: flex;
     justify-content: space-between;
 }
+#about{
+    margin-top: 0%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+
