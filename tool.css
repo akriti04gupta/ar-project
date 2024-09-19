@@ -398,3 +398,70 @@ footer {
     padding: 10px;
     box-sizing: border-box;
 }
+
+/* ----------------------------------- */
+/* Hide tab contents initially */
+.tab-content {
+    display: none;
+}
+
+/* Show active tab content */
+.tab-content.active {
+    display: block;
+}
+
+/* Style active tab button */
+.tab-btn.active-tab {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+/* Default style for tab buttons */
+.tab-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+/* Graph container and animation */
+.graph-container {
+    height: 400px;
+    width: 600px;
+    margin: auto;
+    border: 1px solid #ddd;
+    position: relative;
+}
+
+#graph {
+    width: 0;
+    height: 100%;
+    background-color: lightblue;
+    transition: width 2s ease-in-out;
+}
+
+.graph-move {
+    width: 100%; /* Full width when animation is triggered */
+}
+/* Default style for tab buttons */
+.tab-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    background-color: #f8f8f8;  /* Default background for inactive tabs */
+    color: #333;  /* Default text color */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+/* Style for active tab button */
+.tab-btn.active-tab {
+    background-color: #007bff;  /* Active tab background color */
+    color: white;  /* Active tab text color */
+}
+
+/* Style for hover state of tabs */
+.tab-btn:hover {
+    background-color: #e0e0e0;  /* Lighter color on hover */
+}
+

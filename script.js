@@ -39,25 +39,116 @@ function validateUpload() {
 
         // Show the analysis tools with tabs
         toolsSection.style.display = 'block';
-    }, 1000); // Simulate 2 seconds delay
+    }, 100); // Simulate 2 seconds delay
 }
 
 // Tab functionality
-function openTab(event, tabName) {
+/* function openTab(event, tabName) {
     const tabContent = document.getElementsByClassName('tab-content');
     const tabButtons = document.getElementsByClassName('tab-button');
 
-    // Hide all tab contents
+    
     for (let i = 0; i < tabContent.length; i++) {
         tabContent[i].style.display = 'none';
     }
 
-    // Remove active class from all tab buttons
+    
     for (let i = 0; i < tabButtons.length; i++) {
         tabButtons[i].classList.remove('active');
     }
 
-    // Show the clicked tab content and add active class to the button
+    
     document.getElementById(tabName).style.display = 'block';
     event.currentTarget.classList.add('active');
-}
+} */
+/*     function openTab(tabName) {
+        
+        var tabContents = document.getElementsByClassName("tab-content");
+        for (var i = 0; i < tabContents.length; i++) {
+            tabContents[i].classList.remove("active");
+        }
+    
+        
+        var tabButtons = document.getElementsByClassName("tab-btn");
+        for (var i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].classList.remove("active-tab");
+        }
+    
+        
+        document.getElementById(tabName).classList.add("active");
+    
+        
+        event.target.classList.add("active-tab");
+    
+        
+        if (tabName === 'visualization') {
+            setTimeout(function() {
+                document.getElementById('graph').classList.add('graph-move');
+            }, 100); 
+        } else {
+            
+            document.getElementById('graph').classList.remove('graph-move');
+        }
+    } */
+        /* function openTab(event, tabName) {
+            
+            var tabContents = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+        
+            
+            var tabButtons = document.getElementsByClassName("tab-btn");
+            for (var i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active-tab");
+            }
+        
+            
+            document.getElementById(tabName).classList.add("active");
+        
+            
+            event.target.classList.add("active-tab");
+        
+            
+            if (tabName === 'visualization') {
+                setTimeout(function() {
+                    document.getElementById('graph').classList.add('graph-move');
+                }, 100); 
+            } else {
+                
+                document.getElementById('graph').classList.remove('graph-move');
+            }
+        } */
+
+            function openTab(event, tabName) {
+                // Hide all tab contents
+                var tabContents = document.getElementsByClassName("tab-content");
+                for (var i = 0; i < tabContents.length; i++) {
+                    tabContents[i].classList.remove("active");
+                }
+            
+                // Remove active class from all tab buttons
+                var tabButtons = document.getElementsByClassName("tab-btn");
+                for (var i = 0; i < tabButtons.length; i++) {
+                    tabButtons[i].classList.remove("active-tab");
+                }
+            
+                // Show the clicked tab content
+                document.getElementById(tabName).classList.add("active");
+            
+                // Add active class to the clicked tab button
+                event.target.classList.add("active-tab");
+            
+                // If "visualization" tab is clicked, animate the graph
+                if (tabName === 'visualization') {
+                    setTimeout(function() {
+                        document.getElementById('graph').classList.add('graph-move');
+                    }, 100); // Small delay for smooth transition
+                } else {
+                    // Reset graph when navigating away
+                    document.getElementById('graph').classList.remove('graph-move');
+                }
+            }
+            
+        
+    
